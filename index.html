@@ -11,14 +11,22 @@
         <label>Test Name <input type="text" name="testName"/></label>
         <label>Test Date <input type="date" name="testDate"</label>
         <label>Rocket Type 
-            <select name="rocketType"/>
+            <select name="rocketType">
             <option value="Brant">Brant</option>
             <option value="Lynx">Lynx</option>
             <option value="Orion">Orion</option>
             <option value="Terrier">Terrier</option>
+            </select>
         </label>
-        <lable>Number of Rocket Boosters <input type="number" name="boosterCount"/></lable>
-        <lable>Wind Rating <input type="radio" name="windRating"/></lable>
+        <lable>Number of Rocket Boosters <input type="number" name="boosterCount" min="0" max="9"/></lable>
+        <lable>Wind Rating:
+            <label>No Wind</label>
+            <input type="radio" name="windRating" value="0"/>
+            <label>Mild</label>
+            <input type="radio" name="windRating" value="10"/>
+            <label>Strong</label>
+            <input type="radio" name="windRating" value="20"/>         
+        </lable>
         <label>Use production grade servers <input type="checkbox" name="productionServers"/></label>
         <button>Run Simulation</button>
     </form>
